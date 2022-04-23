@@ -1,10 +1,10 @@
 package session_buntdb
 
 import (
+	"github.com/chefsgo/cache"
 	cb "github.com/chefsgo/cache-buntdb"
-	"github.com/chefsgo/chef"
 )
 
 func init() {
-	chef.Register("file", cb.Driver("store/cache.db"))
+	cache.Register("file", cb.Driver("store/cache.db"))
 }
